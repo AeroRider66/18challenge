@@ -1,46 +1,72 @@
-// Reaction - schema only
-const reactionId = {
-    type: mongoose.Schema.Types.ObjectId,
-    default: new mongoose.Types.ObjectId()
-};
+// Reaction - schema only - pass to Thought
+const { Schema, Types } = require('mongoose');
 
-const reactionBody = {
-    type: String,
-    required: true,
-    maxlength: 280
-};
-
-const username = {
-    type: String,
-    required: true
-};
-
-const createdAt = {
-    type: Date,
-    default: Date.now,
-    get: timestamp => new Date(timestamp).toLocaleDateString()
-};
-
-// Usa in ReactionSchema
-const ReactionSchema = new mongoose.Schema(
+const reactionSchema = new Schema(
     {
-        reactionId,
-        reactionBody,
-        username,
-        createdAt,
-        user: {
+        reactionId: {
             type: mongoose.Schema.Types.ObjectId,
-            require: true,
-            ref: "User",
+            default: new mongoose.Types.ObjectId()
         },
-        reaction: {
+        reactionBody: {
             type: String,
             required: true,
+            maxlength: 280
         },
-        replies: [ReplySchema],
+        username: {
+            type: String,
+            required: true
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now,
+            get: timestamp => new Date(timestamp).toLocaleDateString()
+        }
     },
-    {getters: true}
+    {
+        toJSON: {
+            getters: true,
+        }
+    }
 );
+
+module.exports = reactionSchema;
+
+
+
+//
+//
+//
+//
+// };
+// const username = {
+//     type: String,
+//     required: true
+// };
+// const createdAt = {
+//     type: Date,
+//     default: Date.now,
+//     get: timestamp => new Date(timestamp).toLocaleDateString()
+// };
+//
+// // Usa in reactionSchema
+// const reactionSchema = new mongoose.Schema(
+//     {
+//         reactionId,
+//         reactionBody,
+//         username,
+//         createdAt,
+//         user: {
+//             type: mongoose.Schema.Types.ObjectId,
+//             require: true,
+//             ref: "User",
+//         },
+//         reaction: {
+//             type: String,
+//             required: true,
+//         },
+//         replies: [ReplySchema],
+//     },
+
 
 // reactionId
 //
