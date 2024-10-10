@@ -1,5 +1,4 @@
 const Thought = require('./Thought');
-// align names
-const User = require('')
-
-module.exports = { Item };
+// align name and thought
+const User = require('./User');
+module.exports = { Thought, User };
