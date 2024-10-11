@@ -21,10 +21,6 @@ const randomNameEmail =
         "email": "wilson.middleton@ymail.com"
     },
     {
-        "username": "",
-        "email": ""
-    },
-    {
         "username": 'reclusivesatisfying',
         "email": "jgoerzen@verizon.net"
     },
