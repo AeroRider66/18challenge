@@ -1,6 +1,7 @@
 // email regex from chall 17
 // /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 const { Schema, model, Types } = require('mongoose');
+
 // Defining the User schema
 const userSchema = new Schema(
     {

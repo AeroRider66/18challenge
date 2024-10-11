@@ -18,7 +18,7 @@ const ThoughtController = {
         try {
             const thought = await Thought.findOne({ _id:req.params.thoughtId });
             if (!thought) {
-                res.status(404).json({ message: 'Thought not found' });
+                res.status(404).json({ message: 'Thought does not exist' });
             } else {
                 res.json(thought);
             }
