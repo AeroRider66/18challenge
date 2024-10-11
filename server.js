@@ -12,8 +12,9 @@ const app = express();
 //     : cwd;
 
 app.use(express.urlencoded({ extended: true }));
-app.use(routes);
 app.use(express.json());
+app.use(routes);
+
 
 db.once('open', () => {
     app.listen(PORT, () => {
