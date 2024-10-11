@@ -1,3 +1,5 @@
+// TODO: put this in the Thought model file
+
 // // Reaction - schema only - pass to Thought
 // const { Schema, Types } = require('mongoose');
 //
@@ -32,40 +34,6 @@
 // module.exports = reactionSchema;
 
 
-
-//
-//
-//
-//
-// };
-// const username = {
-//     type: String,
-//     required: true
-// };
-// const createdAt = {
-//     type: Date,
-//     default: Date.now,
-//     get: timestamp => new Date(timestamp).toLocaleDateString()
-// };
-//
-// // Usa in reactionSchema
-// const reactionSchema = new mongoose.Schema(
-//     {
-//         reactionId,
-//         reactionBody,
-//         username,
-//         createdAt,
-//         user: {
-//             type: mongoose.Schema.Types.ObjectId,
-//             require: true,
-//             ref: "User",
-//         },
-//         reaction: {
-//             type: String,
-//             required: true,
-//         },
-//         replies: [ReplySchema],
-//     },
 
 
 // reactionId

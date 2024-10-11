@@ -1,4 +1,3 @@
-// 
 
 const mongoose = require('mongoose');
 //const reactionSchema = require('./reactionSchema');
@@ -55,6 +54,7 @@ const Thought = mongoose.model('Thought', thoughtSchema);
 module.exports = Thought;
 
 // Define the fields for reactionSchema here
+// TODO need to create unique id
 // reactionBody: {
 //     type: String,
 //     required: true,

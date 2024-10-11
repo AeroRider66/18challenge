@@ -46,7 +46,7 @@ const ThoughtController = {
         }
     },
 
-    // PUT update thought
+    // PUT (update) thought
     async updateThoughtById(req, res) {
         try {
             const thought = await Thought.findByIdAndUpdate(req.params.thoughtId, req.body, {
@@ -62,7 +62,7 @@ const ThoughtController = {
         }
     },
 
-    // POST create reaction
+    // POST (create) reaction
     async createReaction(req, res) {
         try {
             const thought = await Thought.findOneAndUpdate(
